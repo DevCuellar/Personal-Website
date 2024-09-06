@@ -1,0 +1,146 @@
+---
+import ThemeToggler from "./ThemeToggler.astro";
+import Menu from "./icons/Menu.astro";
+
+const navItems = [
+    {
+        title: "Sobre mí",
+        label: "sobre-mi",
+        url: "/#sobre-mi",
+    },
+    {
+        title: "Blog",
+        label: "blog",
+        url: "/#blog",
+    },
+    {
+        title: "Contacto",
+        label: "contacto",
+        url: "mailto:davidcuellarmate@gmail.com",
+    },
+];
+---
+
+<nav
+    class="bg-stone-300 dark:bg-stone-950 md:max-w-3xl md:mx-auto pt-5 md:pt-14 mb-10 px-6 md:px-0 overflow-hidden flex items-center justify-center relative z-50"
+    role="navigation"
+>
+    <div class="w-full h-full max-w-3xl flex items-center justify-between">
+        <a class="text-xl font-bold py-4 dark:hover:text-blue-500 hover:text-blue-800" href="/">DAVID CUÉLLAR</a>
+        <div class="hidden md:block">
+            <ul class="flex items-center">
+                {
+                    navItems.map((item) => (
+                        <li class=" dark:hover:text-blue-500 hover:text-blue-800 text-center font-semibold">
+                            <a class="p-5 block w-full h-full cursor-pointer" href={item.url}>
+                                {item.title}
+                            </a>
+                        </li>
+                    ))
+                }
+                <li class="ml-4">
+                    <ThemeToggler />
+                </li>
+            </ul>
+        </div>
+        <Menu class="cursor-pointer size-9 md:hidden" id="toggler" aria-expanded="false" aria-controls="menuList" />
+    </div>
+</nav>
+<ul
+    id="menuList"
+    class="h-full animation-enter w-screen hidden flex-col items-center dark:bg-stone-950 bg-stone-300 absolute top-0 pt-24 z-30"
+>
+    {
+        navItems.map((item) => (
+            <li class="text-2xl border-b-2 dark:border-blue-300/30 dark:hover:text-blue-500 hover:text-blue-800 w-full text-center font-semibold">
+                <a class="p-5 block w-full h-full cursor-pointer" href={item.url}>
+                    {item.title}
+                </a>
+            </li>
+        ))
+    }
+    <li class="w-full text-2xl border-b-2 dark:border-blue-300/30">
+        <ThemeToggler class="p-5 w-full h-full flex justify-center" />
+    </li>
+</ul>
+
+<style>
+    ul.animation-enter {
+        animation: navEnter 0.5s forwards;
+    }
+
+    ul.animation-exit {
+        animation: navExit 0.5s forwards;
+    }
+
+    @keyframes navEnter {
+        from {
+            transform: translateY(-100vh);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes navExit {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(-100vh);
+            opacity: 0;
+        }
+    }
+</style>
+<script>
+    document.addEventListener("astro:page-load", () => {
+        const toggler = document.getElementById("toggler");
+        const menuList = document.getElementById("menuList");
+        let showingMenu = false;
+        let blockAction = false;
+
+        toggler?.addEventListener("click", () => {
+            if (!blockAction) {
+                if (showingMenu) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+
+                blockAction = true;
+                setTimeout(() => {
+                    blockAction = false;
+                }, 500);
+            }
+        });
+
+        document.addEventListener("click", (e) => {
+            const element = e.target as Node;
+            // !menuList?.contains(element) &&
+            if (!toggler?.contains(element) && showingMenu) {
+                closeMenu();
+            }
+        });
+
+        function closeMenu() {
+            menuList?.classList.remove("animation-enter");
+            menuList?.classList.add("animation-exit");
+
+            setTimeout(() => {
+                menuList?.classList.add("hidden");
+                menuList?.classList.remove("flex");
+            }, 400);
+            showingMenu = false;
+        }
+        function openMenu() {
+            menuList?.classList.remove("animation-exit");
+            menuList?.classList.add("animation-enter");
+            menuList?.classList.remove("hidden");
+            menuList?.classList.add("flex");
+            showingMenu = true;
+        }
+    });
+</script>
