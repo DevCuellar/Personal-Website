@@ -126,6 +126,7 @@ const navItems = [
         });
 
         function closeMenu() {
+            document.body.style.overflow = "auto";
             menuList?.classList.remove("animation-enter");
             menuList?.classList.add("animation-exit");
 
@@ -136,6 +137,11 @@ const navItems = [
             showingMenu = false;
         }
         function openMenu() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+            document.body.style.overflow = "hidden";
             menuList?.classList.remove("animation-exit");
             menuList?.classList.add("animation-enter");
             menuList?.classList.remove("hidden");
