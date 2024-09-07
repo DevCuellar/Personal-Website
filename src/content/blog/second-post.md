@@ -1,5 +1,5 @@
 ---
-title: "Second post"
+title: "🍻 Second post"
 description: "Lorem ipsum dolor sit amet"
 preview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra..."
 readingTime: "5 min"
