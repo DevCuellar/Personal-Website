@@ -1,4 +1,5 @@
 ---
+import SocialLink from "../components/SocialLink.astro";
 import Twitter from "../components/icons/Twitter.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
 import Github from "../components/icons/Github.astro";
@@ -8,11 +9,31 @@ import Youtube from "../components/icons/Youtube.astro";
 <footer class="pt-20 pb-14 absolute bottom-0 w-full">
     <div class="max-w-md w-11/12 mx-auto md:max-w-3xl md:mx-auto flex justify-between items-center">
         © David Cuéllar
-        <nav class="flex justify-between items-center">
-            <Linkedin class="size-6 mr-3" />
-            <Github class="size-6 mr-3" />
-            <Twitter class="size-6 mr-3" />
-            <Youtube class="size-6" />
+        <nav class="flex">
+            <SocialLink
+                link="https://www.linkedin.com/in/devcuellar"
+                class="hover:text-[#1DA1F2] dark:hover:text-[#1DA1F2] hover:scale-110 mb-3 md:mb-0 mr-4"
+            >
+                <Linkedin class="size-6" />
+            </SocialLink>
+            <SocialLink
+                link="https://github.com/devcuellar"
+                class="hover:text-[#444242] dark:hover:text-[#444242] hover:scale-110 mb-3 md:mb-0 mr-4"
+            >
+                <Github class="size-6" />
+            </SocialLink>
+            <SocialLink
+                link="https://x.com/DevCuellar_"
+                class="hover:text-[#0077B5] dark:hover:text-[#0077B5] hover:scale-110 mb-3 md:mb-0 mr-4"
+            >
+                <Twitter class="size-6" />
+            </SocialLink>
+            <SocialLink
+                link="https://www.youtube.com/@devcuellar"
+                class="hover:text-[#FF0000] dark:hover:text-[#FF0000] hover:scale-110"
+            >
+                <Youtube class="size-6" />
+            </SocialLink>
         </nav>
     </div>
 </footer>
