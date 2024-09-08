@@ -6,13 +6,12 @@ import Linkedin from "../components/icons/Linkedin.astro";
 import Github from "../components/icons/Github.astro";
 import Youtube from "../components/icons/Youtube.astro";
 import MoreButton from "../components/MoreButton.astro";
-import { getCollection } from "astro:content";
-import type { BlogPost } from "../utils/interfaces/Blog";
+import { getCollection, type CollectionEntry } from "astro:content";
 import { dateFormat } from "../utils/formatters/dateFormat";
 
 const posts = (await getCollection("blog"))
-    .filter((_: BlogPost, i: number) => i < 5)
-    .sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+    .filter((_: CollectionEntry<"blog">, i: number) => i < 5)
+    .sort((a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <Layout title="David Cuéllar - Programador y desarrollador web con javascript">
@@ -22,8 +21,8 @@ const posts = (await getCollection("blog"))
             src="https://pbs.twimg.com/profile_images/1831943359318880256/OmF7o0Gr_400x400.jpg"
         />
         <div class="md:ml-16 flex flex-col">
-            <span class="text-4xl font-extrabold block">Hola 👋🏼, soy David. </span>
-            <font class="text-4xl font-extrabold text-slate-700 dark:text-slate-400"
+            <span class="text-4xl font-bold block">Hola, soy David.</span>
+            <font class="text-4xl  text-slate-700 dark:text-slate-400"
                 >Desarrollador de soluciones web</font
             >
             <nav class="flex flex-col justify-center items-start md:justify-start sm:flex-row mt-8 md:mt-4 text-lg">
@@ -79,6 +78,6 @@ const posts = (await getCollection("blog"))
             ))
         }
 
-        <MoreButton class="mt-[-35px]" href="#">Leer más artículos</MoreButton>
+        <MoreButton class="mt-[-35px]" href="/blog">Leer más artículos</MoreButton>
     </section>
 </Layout>

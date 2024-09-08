@@ -1,12 +1,12 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import type { BlogPost } from "../../utils/interfaces/Blog";
+import Prose from "../../components/Prose.astro";
 import { dateFormat } from "../../utils/formatters/dateFormat";
 
 export async function getStaticPaths() {
     const posts = await getCollection("blog");
-    return posts.map((post: BlogPost) => ({
+    return posts.map((post: CollectionEntry<"blog">) => ({
         params: { slug: post.slug },
         props: post,
     }));
@@ -21,12 +21,8 @@ const { Content } = await post.render();
     <h1 class="text-3xl font-extrabold mb-2 mt-12">{post.data.title}</h1>
     <p class="mb-10">{dateFormat(post.data.pubDate)} • {post.data.readingTime}</p>
     <article>
-        <Content />
+        <Prose>
+            <Content />
+        </Prose>
     </article>
 </Layout>
-
-<style>
-    article h1 {
-        @apply text-3xl;
-    }
-</style>

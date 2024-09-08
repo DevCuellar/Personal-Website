@@ -103,13 +103,13 @@ we can use 3 backticks ``` in new line and write snippet and close with 3 backti
 ```html
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Example HTML5 Document</title>
+    </head>
+    <body>
+        <p>Test</p>
+    </body>
 </html>
 ```
 ````
@@ -119,13 +119,13 @@ we can use 3 backticks ``` in new line and write snippet and close with 3 backti
 ```html
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Example HTML5 Document</title>
+    </head>
+    <body>
+        <p>Test</p>
+    </body>
 </html>
 ```
 
@@ -152,40 +152,40 @@ we can use 3 backticks ``` in new line and write snippet and close with 3 backti
 #### Syntax
 
 ```markdown
-- List item
-- Another item
-- And another item
+-   List item
+-   Another item
+-   And another item
 ```
 
 #### Output
 
-- List item
-- Another item
-- And another item
+-   List item
+-   Another item
+-   And another item
 
 ### Nested list
 
 #### Syntax
 
 ```markdown
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
+-   Fruit
+    -   Apple
+    -   Orange
+    -   Banana
+-   Dairy
+    -   Milk
+    -   Cheese
 ```
 
 #### Output
 
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
+-   Fruit
+    -   Apple
+    -   Orange
+    -   Banana
+-   Dairy
+    -   Milk
+    -   Cheese
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 
@@ -214,3 +214,4 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
