@@ -18,8 +18,8 @@ const { Content } = await post.render();
 ---
 
 <Layout title="David Cuéllar - Blog">
-    <h1 class="text-3xl font-extrabold mb-2 mt-12">{post.data.title}</h1>
-    <p class="mb-10">{dateFormat(post.data.pubDate)} • {post.data.readingTime}</p>
+    <h1 class="text-3xl font-extrabold mb-2 mt-12 text1">{post.data.title}</h1>
+    <p class="mb-10 text2">{dateFormat(post.data.pubDate)} • {post.data.readingTime}</p>
     <article>
         <Prose>
             <Content />

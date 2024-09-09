@@ -76,7 +76,7 @@ const posts = (await getCollection("blog"))
                         </h2>
                     </header>
                     <p class="my-3 font-bold text-l text-2">
-                        {dateFormat(post.data.pubDate)} • {post.data.readingTime}
+                        {dateFormat(post.data.pubDate)} <span class="mx-1">•</span> {post.data.readingTime} <span class="mx-1">•</span> {post.data.tag}
                     </p>
                     <div>
                         <p class="text-xl text3">{post.data.preview}</p>

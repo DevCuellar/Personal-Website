@@ -1,5 +1,14 @@
 <!-- https://docs.astro.build/en/recipes/tailwind-rendered-markdown/ -->
 <!-- https://github.com/tailwindlabs/tailwindcss-typography -->
-<div class="prose-lg dark:prose-invert">
+<div class="prose-lg dark:prose-invert prose-h2:text-2xl prose-p:">
     <slot />
 </div>
+
+<style>
+    .blog-h2{
+        @apply text-2xl text-gray-800 dark:text-gray-200;
+    }
+    .blog-p{
+        @apply text-gray-700 dark:text-gray-300;
+    }
+</style>
