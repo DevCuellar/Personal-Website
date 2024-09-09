@@ -22,17 +22,17 @@ const navItems = [
 ---
 
 <nav
-    class="bg-stone-300 dark:bg-stone-950 md:max-w-3xl md:mx-auto pt-5 md:pt-14 mb-10 px-6 md:px-0 overflow-hidden flex items-center justify-center relative z-50"
+    class="bg-gray-100 dark:bg-gray-900 md:max-w-3xl md:mx-auto pt-5 md:pt-14 mb-10 px-6 md:px-0 overflow-hidden flex items-center justify-center relative z-50"
     role="navigation"
 >
     <div class="w-full h-full max-w-3xl flex items-center justify-between">
-        <a class="text-xl font-bold py-4 dark:hover:text-blue-500 hover:text-blue-800" href="/">DAVID CUÉLLAR</a>
+        <a class="text-xl font-bold py-4 text3 link" href="/">DAVID CUÉLLAR</a>
         <div class="hidden md:block">
             <ul class="flex items-center">
                 {
                     navItems.map((item) => (
-                        <li class=" dark:hover:text-blue-500 hover:text-blue-800 text-center font-semibold">
-                            <a class="p-5 block w-full h-full cursor-pointer" href={item.url}>
+                        <li class=" text3 link text-center font-semibold">
+                            <a class="p-5  block w-full h-full cursor-pointer" href={item.url}>
                                 {item.title}
                             </a>
                         </li>
@@ -46,20 +46,17 @@ const navItems = [
         <Menu class="cursor-pointer size-9 md:hidden" id="toggler" aria-expanded="false" aria-controls="menuList" />
     </div>
 </nav>
-<ul
-    id="menuList"
-    class="h-full animation-enter w-screen hidden flex-col items-center dark:bg-stone-950 bg-stone-300 absolute top-0 pt-24 z-30"
->
+<ul id="menuList" class="h-full animation-enter w-screen hidden flex-col items-center dark:bg-gray-900 bg-gray-100 absolute top-0 pt-24 z-30">
     {
         navItems.map((item) => (
-            <li class="text-2xl border-b-2 dark:border-blue-300/30 dark:hover:text-blue-500 hover:text-blue-800 w-full text-center font-semibold">
+            <li class="text-2xl border-b-2 dark:border-blue-300/30 text3 link w-full text-center font-semibold">
                 <a class="p-5 block w-full h-full cursor-pointer" href={item.url}>
                     {item.title}
                 </a>
             </li>
         ))
     }
-    <li class="w-full text-2xl border-b-2 dark:border-blue-300/30">
+    <li class="w-full text-2xl border-b-2 dark:border-blue-300/30 text3">
         <ThemeToggler class="p-5 w-full h-full flex justify-center" />
     </li>
 </ul>

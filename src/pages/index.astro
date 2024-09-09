@@ -28,34 +28,34 @@ const posts = (await getCollection("blog"))
             height="142"
         />
         <div class="md:ml-16 flex flex-col">
-            <span class="text-4xl font-bold block">Hola, soy David.</span>
-            <font class="text-4xl text-slate-700 dark:text-slate-400">Desarrollador de soluciones web</font>
+            <span class="text-4xl font-bold block text1">Hola, soy David.</span>
+            <font class="text-4xl text2">Desarrollador de soluciones web</font>
             <nav class="flex flex-col justify-center items-start md:justify-start sm:flex-row mt-8 md:mt-4">
                 <SocialLink
                     text="Linkedin"
                     link="https://www.linkedin.com/in/devcuellar"
-                    class="text-slate-700 dark:text-slate-400 hover:text-[#1DA1F2] dark:hover:text-[#1DA1F2] hover:scale-110 mb-3 md:mb-0"
+                    class="text2 hover:text-[#1DA1F2] dark:hover:text-[#1DA1F2] hover:scale-110 mb-3 md:mb-0"
                 >
                     <Linkedin class="mr-3 md:mr-1 text-[#0077B5]" />
                 </SocialLink>
                 <SocialLink
                     text="Github"
                     link="https://github.com/devcuellar"
-                    class="text-slate-700 dark:text-slate-400 sm:ml-7 hover:text-[#444242] dark:hover:text-[#444242] hover:scale-110 mb-3 md:mb-0"
+                    class="text2 sm:ml-7 hover:text-[#444242] dark:hover:text-[#444242] hover:scale-110 mb-3 md:mb-0"
                 >
                     <Github class="mr-3 md:mr-1 text-[#444242]" />
                 </SocialLink>
                 <SocialLink
                     text="Twitter"
                     link="https://x.com/DevCuellar_"
-                    class="text-slate-700 dark:text-slate-400 sm:ml-7 hover:text-[#0077B5] dark:hover:text-[#0077B5] hover:scale-110 mb-3 md:mb-0"
+                    class="text2 sm:ml-7 hover:text-[#0077B5] dark:hover:text-[#0077B5] hover:scale-110 mb-3 md:mb-0"
                 >
                     <Twitter class="mr-3 md:mr-1 text-[#1DA1F2]" />
                 </SocialLink>
                 <SocialLink
                     text="Youtube"
                     link="https://www.youtube.com/@devcuellar"
-                    class="text-slate-700 dark:text-slate-400 sm:ml-7 hover:text-[#FF0000] dark:hover:text-[#FF0000] hover:scale-110 mb-3 md:mb-0"
+                    class="text2 sm:ml-7 hover:text-[#FF0000] dark:hover:text-[#FF0000] hover:scale-110 mb-3 md:mb-0"
                 >
                     <Youtube class="mr-3 md:mr-1 text-[#FF0000]" />
                 </SocialLink>
@@ -63,23 +63,23 @@ const posts = (await getCollection("blog"))
         </div>
     </section>
     <section>
-        <h2 class="text-xl font-bold">ÚLTIMAS ENTRADAS</h2>
+        <h2 class="text-xl font-bold text1">ÚLTIMAS ENTRADAS</h2>
 
         {
             posts.map((post: any) => (
                 <article class="mt-9 mb-12">
                     <header>
-                        <h2 class="text-2xl font-bold text-black dark:text-white">
-                            <a class="dark:hover:text-blue-500 hover:text-blue-800" href={`/blog/${post.slug}`}>
+                        <h2 class="text-2xl font-bold text1">
+                            <a class="link" href={`/blog/${post.slug}`}>
                                 {post.data.title}
                             </a>
                         </h2>
                     </header>
-                    <p class="my-3 font-bold text-l">
+                    <p class="my-3 font-bold text-l text-2">
                         {dateFormat(post.data.pubDate)} • {post.data.readingTime}
                     </p>
                     <div>
-                        <p class="text-xl">{post.data.preview}</p>
+                        <p class="text-xl text3">{post.data.preview}</p>
                     </div>
                 </article>
             ))

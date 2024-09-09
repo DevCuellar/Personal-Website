@@ -10,9 +10,9 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <Layout title="David Cuéllar - Blog">
-    <h1 class="text-3xl font-extrabold mb-2">Blog</h1>
+    <h1 class="text-3xl font-extrabold mb-2 text1">Blog</h1>
     <hr class="mb-6 opacity-25">
-    <p class="mb-10">
+    <p class="mb-10 text2">
         Este es mi blog, aquí podrás leer artículos sobre programación, reflexiones personales o cualquier cosa que se
         me ocurra y me apetezca compartir.
     </p>
@@ -20,11 +20,11 @@ const posts = (await getCollection("blog")).sort(
         posts.map((post: any) => (
             <div class="mb-8">
                 <header>
-                    <h2 class="font-bold text-black dark:text-white dark:hover:text-blue-500 hover:text-blue-800">
+                    <h2 class="font-bold text1 link">
                         <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
                     </h2>
                 </header>
-                <p class="font-bold text-l text-stone-900/60 dark:text-stone-300/60">
+                <p class="font-bold text-l text3">
                     {dateFormat(post.data.pubDate)} • {post.data.readingTime}
                 </p>
             </div>

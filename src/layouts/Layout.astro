@@ -21,13 +21,13 @@ const { title } = Astro.props;
         <meta name="generator" content={Astro.generator} />
 
         <!-- favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/favicon/site.webmanifest">
-        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,7 +36,7 @@ const { title } = Astro.props;
         <title>{title}</title>
         <ViewTransitions />
     </head>
-    <body class="bg-stone-300 dark:bg-stone-950 text-stone-950 dark:text-stone-300">
+    <body class="bg-gray-100 dark:bg-gray-900 text-stone-950 dark:text-stone-300">
         <Header />
         <article class="max-w-md w-11/12 mx-auto md:max-w-3xl md:mx-auto">
             <slot />
@@ -63,5 +63,20 @@ const { title } = Astro.props;
         /* height: 100vh; */
         margin-bottom: 160px;
         @apply text-lg;
+    }
+
+    /* Clases personalizadas de colores para los textos */
+    .text1 {
+        @apply text-gray-900 dark:text-gray-100;
+    }
+    .text2 {
+        @apply text-gray-800 dark:text-gray-200;
+    }
+    .text3 {
+        @apply text-gray-700 dark:text-gray-300;
+    }
+
+    .link {
+        @apply dark:hover:text-blue-500 hover:text-blue-800;
     }
 </style>
