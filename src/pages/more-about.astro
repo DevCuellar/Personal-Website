@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PageTitle from "../components/PageTitle.astro";
+import Link from "../components/Link.astro";
 ---
 
 <Layout title="David Cuéllar - Más sobre mí">
@@ -9,7 +10,7 @@ import PageTitle from "../components/PageTitle.astro";
 
   <h2 class="pb-2"><span role="img">🏠</span>DESCRIPCIÓN GENERAL</h2>
   <p class="mb-3">
-    Mi personalidad según el test de <a href="https://www.16personalities.com/es/personalidad-intj" target="_blank">16personalities</a> es Arquitecto (INTJ), y creo que me resume bastante bien:
+    Mi personalidad según el test de <Link href="https://www.16personalities.com/es/personalidad-intj">16personalities</Link> es Arquitecto (INTJ), y creo que me resume bastante bien:
   </p>
   <ul>
     <li>
@@ -32,10 +33,10 @@ import PageTitle from "../components/PageTitle.astro";
   <h2 class="pb-2"><span role="img">👎🏼</span>DEBILIDADES</h2>
   <ul>
     <li>
-      <strong>Perdido en los Detalles:</strong> A veces me concentro demasiado en los detalles y pierdo de vista el panorama general.
+      <strong>Me Pierdo en los Detalles:</strong> A veces me centro demasiado en los detalles y pierdo de vista el panorama general.
     </li>
     <li>
-      <strong>Análisis Excesivo:</strong> Mi naturaleza analítica puede ralentizar la toma de decisiones y la acción.
+      <strong>Análisis Excesivo:</strong> Mi naturaleza analítica me puede ralentizar en la toma de decisiones y el paso a la acción.
     </li>
     <li>
       <strong>Dificultad para Decir "No":</strong> Acepto más responsabilidades de las que a veces puedo manejar, lo que puede llevarme a una carga excesiva de trabajo.
@@ -44,28 +45,29 @@ import PageTitle from "../components/PageTitle.astro";
   <h2 class="pb-2"><span role="img">🛠️</span>PRINCIPIOS</h2>
   <ul>
     <li>
-      <strong>Mentalidad de Crecimiento:</strong> Siempre busco mejorar y desafiarme a mí mismo. La comodidad me hace sentir que mi trabajo y felicidad están en riesgo.
+      <strong>Mentalidad de Crecimiento:</strong> Siempre estoy buscando nuevos enfoques y desafíos que me permitan mejorar como desarrollador y persona.
     </li>
     <li>
-      <strong>Tiempo para la Reflexión:</strong> Reservo momentos para explorar ideas que no siempre están relacionadas con mis proyectos actuales. Sin este tiempo, me siento como una máquina.
+      <strong>Tiempo de Aprendizaje:</strong> Considero importante dedicar tiempo regularmente a seguir aprendiendo y perfeccionando mis habilidades.
     </li>
     <li>
-      <strong>Hazlo Simple:</strong> Aunque a veces es necesario profundizar, prefiero mantener las cosas simples siempre que sea posible.
+      <strong>Hazlo Simple:</strong> Creo firmemente en que las soluciones más efectivas son las más simples, procuro mantener las cosas sencillas siempre que sea posible.
     </li>
     <li>
-      <strong>Las Opiniones son Útiles:</strong> Tanto las personas como los productos deben tener opiniones. Tomar una postura ayuda a avanzar en la conversación.
+      <strong>Aceptar las Opiniones:</strong> Escuchar y considerar las opiniones de los demás es clave para mejorar. Valoro la retroalimentación y busco siempre colaborar en un entorno donde exista un intercambio de ideas.
     </li>
     <li>
-      <strong>Aprendizaje en Público:</strong> Encuentro satisfacción al compartir conocimientos útiles a través de publicaciones y contenido.
+      <strong>Compartir Conocimiento:</strong> Me apasiona compartir lo que sé. Creo en la importancia de contribuir a la comunidad y a mi equipo, ofreciendo mi conocimiento y aprendiendo a su vez de los demás.
     </li>
   </ul>
-  <h2 class="pb-2"><span role="img">📚</span>LIBROS FAVORITOS</h2>
-  <p>Estos son algunos de los libros que más me han influido:</p>
+  <h2 class="pb-2"><span role="img">📚</span>LIBROS</h2>
+  <!-- FAVORITOS -->
+  <p>Estos son algunos de los libros que estoy leyendo actualmente:</p>
   <br />
   <ul>
-    <li><strong>"Cómo ganar amigos e influir sobre las personas"</strong> – Dale Carnegie</li>
-    <li><strong>"Los 7 hábitos de la gente altamente efectiva"</strong> – Stephen R. Covey</li>
-    <li><strong>"El monje que vendió su Ferrari"</strong> – Robin Sharma</li>
+    <li><strong><Link href="https://amzn.to/3MGJUJi">"Cómo ganar amigos e influir sobre las personas"</Link></strong> – Dale Carnegie</li>
+    <li><strong><Link href="https://amzn.to/3MF9SNt">"Los 7 hábitos de la gente altamente efectiva"</Link></strong> – Stephen R. Covey</li>
+    <li><strong><Link href="https://amzn.to/3MC9eAr">"El monje que vendió su Ferrari"</Link></strong> – Robin Sharma</li>
   </ul>
   <h2 class="pb-2"><span role="img">🙏🏼</span>CITA FAVORITA</h2>
   <blockquote class="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
