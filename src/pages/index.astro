@@ -43,6 +43,6 @@ const posts = (await getCollection("blog"))
 
     {posts.map((post: any) => <PostResume post={post} />)}
 
-    <MoreButton class="mt-[-35px]" href="/blog">Leer más artículos</MoreButton>
+    <MoreButton class="relative top-[-35px]" href="/blog">Leer más artículos</MoreButton>
   </section>
 </Layout>

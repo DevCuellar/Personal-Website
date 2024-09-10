@@ -2,6 +2,6 @@
 const { href, class: className } = Astro.props;
 ---
 
-<a href={href} class="${className} text-xl dark:text-blue-400 text-blue-600 hover:bg-blue-300/30 dark:hover:bg-blue-300/10 p-1 rounded-xl"
+<a href={href} class=`${className} text-xl dark:text-blue-400 text-blue-600 hover:bg-blue-300/30 dark:hover:bg-blue-300/10 p-1 rounded-xl`
     ><slot /> →</a
 >
