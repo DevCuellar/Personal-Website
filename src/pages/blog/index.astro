@@ -1,33 +1,15 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import PageTitle from "../../components/PageTitle.astro";
 import { getCollection } from "astro:content";
-import { dateFormat } from "../../utils/formatters/dateFormat";
 import type { CollectionEntry } from "astro:content";
+import PostResume from "../../components/PostResume.astro";
 
-const posts = (await getCollection("blog")).sort(
-    (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = (await getCollection("blog")).sort((a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <Layout title="David Cuéllar - Blog">
-    <h1 class="text-3xl font-extrabold mb-2 text1">Blog</h1>
-    <hr class="mb-6 opacity-25">
-    <p class="mb-10 text2">
-        Este es mi blog, aquí podrás leer artículos sobre programación, reflexiones personales o cualquier cosa que se
-        me ocurra y me apetezca compartir.
-    </p>
-    {
-        posts.map((post: any) => (
-            <div class="mb-8">
-                <header>
-                    <h2 class="font-bold text1 link">
-                        <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-                    </h2>
-                </header>
-                <p class="font-bold text-l text3">
-                    {dateFormat(post.data.pubDate)} • {post.data.readingTime}
-                </p>
-            </div>
-        ))
-    }
+  <PageTitle>Blog</PageTitle>
+  <p class="mb-10 text2">Este es mi blog, aquí podrás leer artículos sobre programación, reflexiones personales o cualquier cosa que se me ocurra y me apetezca compartir.</p>
+  {posts.map((post: any) => <PostResume post={post} small="true" />)}
 </Layout>

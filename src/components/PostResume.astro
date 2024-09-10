@@ -1,0 +1,24 @@
+---
+const { post, small } = Astro.props;
+import { dateFormat } from "../utils/formatters/dateFormat";
+---
+
+<article class=`${small ? 'mb-8' : 'mt-9 mb-12'}`>
+  <header>
+    <h2 class=`${small ? 'text-xl' : 'text-2xl'} font-bold text1`>
+      <a class="link" href={`/blog/${post.slug}`}>
+        {post.data.title}
+      </a>
+    </h2>
+  </header>
+  <p class=`${small ? '' : 'my-3'} font-bold text-l text-2`>
+    {dateFormat(post.data.pubDate)}
+    <span class="mx-1">•</span>
+    {post.data.readingTime}
+    <span class="mx-1">•</span>
+    {post.data.tag}
+  </p>
+  <div class=`${small ? 'hidden' : ''}`>
+    <p class="text-xl text3">{post.data.preview}</p>
+  </div>
+</article>

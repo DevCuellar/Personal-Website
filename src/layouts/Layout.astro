@@ -36,7 +36,7 @@ const { title } = Astro.props;
         <title>{title}</title>
         <ViewTransitions />
     </head>
-    <body class="bg-gray-100 dark:bg-gray-950 text-stone-950 dark:text-stone-300">
+    <body class="bg-stone-100 dark:bg-stone-950 text-stone-700 dark:text-stone-300">
         <Header />
         <article class="max-w-md w-11/12 mx-auto md:max-w-3xl md:mx-auto">
             <slot />
@@ -66,30 +66,26 @@ const { title } = Astro.props;
 
     /* Clases personalizadas de colores para los textos */
     .text1 {
-        @apply text-gray-900 dark:text-gray-100;
+        @apply text-stone-900 dark:text-stone-100;
     }
     .text2 {
-        @apply text-gray-800 dark:text-gray-200;
+        @apply text-stone-800 dark:text-stone-200;
     }
     .text3 {
-        @apply text-gray-700 dark:text-gray-300;
+        @apply text-stone-700 dark:text-stone-300;
     }
 
     .link {
-        @apply dark:hover:text-blue-500 hover:text-blue-800;
-    }
-
-    .visible-link {
-        @apply font-bold text-blue-700 dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-800;
+        @apply dark:hover:text-blue-600 hover:text-blue-800;
     }
 
     /* SCROLLBAR */
     * {
         scrollbar-width: thin;
-        scrollbar-color: #030712 #f3f4f6;
+        scrollbar-color: #0c0a09 #f3f4f6;
     }
 
     .dark {
-        scrollbar-color: #f3f4f6 #030712;
+        scrollbar-color: #f3f4f6 #0c0a09;
     }
 </style>

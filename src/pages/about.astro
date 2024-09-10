@@ -1,42 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PageTitle from "../components/PageTitle.astro";
 import MoreButton from "../components/MoreButton.astro";
+import Link from "../components/Link.astro";
 ---
 
 <Layout title="David Cuéllar - Sobre mí">
-    <h1 class="text-3xl font-extrabold mb-2 text1">Hola, soy David 👋🏼</h1>
-    <hr class="mb-6 opacity-25" />
-    <section>
-        <p>
-            Un desarrollador con una sólida experiencia en el desarrollo web full stack. Mi enfoque principal está en JavaScript,
-            utilizando frameworks como Angular en el frontend y NestJS en el backend para construir aplicaciones robustas y eficientes. Me apasiona
-            resolver problemas complejos con soluciones elegantes y prácticas.
-        </p>
-        <p>
-            Mi filosofía es que el código debe ser claro, eficiente y adaptable. Creo en el poder de una buena planificación y en la colaboración
-            efectiva para obtener los mejores resultados. Fuera del desarrollo, me dedico a compartir conocimientos en YouTube, donde hablo sobre todo
-            lo relacionado con la programación web.
-        </p>
-        <h2 class="text-2xl text3 font-bold">¿Qué hago?</h2>
-        <p>
-            Actualmente me encuentro trabajando como desarrollador para GoldenSoft S.L. donde me dedico al mantenimiento y desarrollo de diferentes
-            proyectos de gestión empresarial (CRM-ERP). También desarrollo proyectos para particulares como freelance.
-        </p>
-        <p>
-            Si tienes alguna idea en mente no dudes en contactarme en el apartado de contacto o escribiéndome directamente por mail o por Twitter
-            dónde suelo estar bastante activo.
-        </p>
-        <h2 class="text-2xl text3 font-bold">¿Quieres saber más?</h2>
-        <p>
-            He añadido un apartado en el que te cuento algunas cosas más sobre mí. Allí podrás descubrir algunas de mis fortalezas, debilidades y
-            algunas curiosidades más sobre mi.
-        </p>
-    </section>
-    <MoreButton class="mt-[-20px]" href="/more-about">Más sobre mí</MoreButton>
+  <PageTitle>Hola, soy David 👋🏼</PageTitle>
+  <section>
+    <p>
+      Soy un desarrollador web full stack, con una sólida experiencia en <Link href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</Link>. Me encanta crear aplicaciones web buscando siempre que estas sean eficientes, rápidas y
+      escalables. Los principales frameworks con los que trabajo son <Link href="https://angular.dev/">Angular</Link> en el frontend y <Link href="https://nestjs.com/">NestJS</Link> en el backend, aunque no son los únicos y siempre estoy buscando aprender
+      nuevas tecnologías. Disfruto enfrentar retos complejos y tratar de encontrar soluciones creativas y funcionales.
+    </p>
+    <p>
+      Ya desde adolescente me entretenía siguiendo tutoriales en YouTube con los que comencé a crear mis primeras webs, y es que el mundo del desarrollo web siempre me ha parecido fascinante, lo que me ha llevado a hacer del código mi carrera
+      profesional. Mi filosofía es simple "Si una solución parece demasiado compleja, probablemente lo sea". Me gusta tratar de resolver los problemas de la forma mas sencilla posible y procuro cuidar las buenas prácticas de programación siguiendo el
+      consejo de John F. Woods, <Link href="https://ruby.zigzo.com/2014/08/01/who-said-that-one-violent-psychopath-quote/">falsamente atribuido a Martin Golding</Link>, «Codifica siempre como si la persona que finalmente mantendrá tu código fuera un
+      psicópata violento que sabe dónde vives».
+    </p>
+    <h2 class="text-2xl text3 font-bold">¿A qué me dedico?</h2>
+    <p>
+      Actualmente trabajo para <Link href="https://goldensoft.com/">GoldenSoft S.L.</Link> como programador, donde participo en el desarrollo y mantenimiento de sistemas de gestión empresarial (CRM-ERP), aunque también trabajo como freelance ayudando
+      a particulares a llevar sus ideas a la realidad.
+    </p>
+    <p>
+      Si tienes un proyecto en mente no dudes en contactar conmigo. Puedes hacerlo a través del apartado de <Link href="/contact">contacto</Link>, por <Link href="mailto:contacto@davidcuellar.com">correo</Link> o en <Link
+        href="https://x.com/DevCuellar_">twitter</Link
+      >, donde suelo estar bastante activo.
+    </p>
+    <h2 class="text-2xl text3 font-bold">¿Quieres conocerme mejor?</h2>
+    <p>He añadido un apartado en el que te cuento más sobre mí. En él podrás descubrir cuales son mis fortalezas y mis debilidades y algunas otras curiosidades.</p>
+  </section>
+  <MoreButton class="mt-[-20px]" href="/more-about">Más sobre mí</MoreButton>
 </Layout>
 
 <style>
-    p {
-        @apply mb-7;
-    }
+  p {
+    @apply mb-7;
+  }
 </style>

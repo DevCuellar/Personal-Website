@@ -1,14 +1,10 @@
-<!-- https://docs.astro.build/en/recipes/tailwind-rendered-markdown/ -->
-<!-- https://github.com/tailwindlabs/tailwindcss-typography -->
-<div class="prose-lg dark:prose-invert prose-h2:text-2xl prose-p:">
+<!-- https://docs.astro.build/en/recipes/tailwind-rendered-markdown/ --><!-- https://github.com/tailwindlabs/tailwindcss-typography -->
+<div
+    class="prose-lg dark:prose-invert prose-h2:text-2xl
+ prose-h2:text-stone-800 dark:prose-h2:text-stone-200
+ prose-p:text-stone-700 dark:prose-p:text-stone-300
+ prose-a:text-blue-700 dark:prose-a:text-blue-500
+ hover:prose-a:text-blue-800 dark:hover:prose-a:text-blue-600"
+>
     <slot />
 </div>
-
-<style>
-    .blog-h2{
-        @apply text-2xl text-gray-800 dark:text-gray-200;
-    }
-    .blog-p{
-        @apply text-gray-700 dark:text-gray-300;
-    }
-</style>

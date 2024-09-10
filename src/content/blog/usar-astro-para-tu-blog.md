@@ -1,5 +1,5 @@
 ---
-title: "🌌 ¿Por qué usar Astro para tu blog o web personal?"
+title: "🪐 ¿Por qué usar Astro para tu blog o web personal?"
 preview: "En el vasto mundo del desarrollo web, siempre estamos buscando herramientas que nos ayuden a construir sitios web rápidos, modernos y mantenibles. Una de las herramientas que ha estado ganando popularidad..."
 readingTime: "3 min"
 pubDate: "Sep 9 2024"
