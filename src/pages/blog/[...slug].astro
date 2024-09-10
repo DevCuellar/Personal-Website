@@ -15,6 +15,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
+const titleWithoutEmoji = post.data.title.substring(post.data.title.indexOf(" "));
 const { Content } = await post.render();
 
 const posts = (await getCollection("blog"))
@@ -23,9 +24,9 @@ const posts = (await getCollection("blog"))
   .slice(0, 3);
 ---
 
-<Layout title="David Cuéllar - Blog">
+<Layout title=`David Cuéllar - ${titleWithoutEmoji}`>
   <h1 class="text-3xl font-extrabold mb-2 mt-12 text1">{post.data.title}</h1>
-  <p class="mb-10 text2">
+  <p class="mb-10 text2 opacity-60 text-xl font-bold">
     {dateFormat(post.data.pubDate)}
     <span class="mx-1">•</span>
     {post.data.readingTime}

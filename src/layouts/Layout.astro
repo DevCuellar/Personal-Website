@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
-    title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -13,79 +13,79 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
 
-        <!-- favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet" />
 
-        <title>{title}</title>
-        <ViewTransitions />
-    </head>
-    <body class="bg-stone-100 dark:bg-stone-950 text-stone-700 dark:text-stone-300">
-        <Header />
-        <article class="max-w-md w-11/12 mx-auto md:max-w-3xl md:mx-auto">
-            <slot />
-        </article>
-        <Footer />
-    </body>
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class="bg-stone-100 dark:bg-stone-950 text-stone-700 dark:text-stone-300">
+    <Header />
+    <article class="max-w-md w-11/12 mx-auto md:max-w-3xl md:mx-auto">
+      <slot />
+    </article>
+    <Footer />
+  </body>
 </html>
 <style is:global>
-    * {
-        box-sizing: border-box;
-        font-family: "Onest", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: <weight>;
-        font-style: normal;
-    }
+  * {
+    box-sizing: border-box;
+    font-family: "Onest", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
 
-    html {
-        scrollbar-gutter: stable both-edges;
-        min-height: 100%;
-        position: relative;
-    }
+  html {
+    scrollbar-gutter: stable both-edges;
+    min-height: 100%;
+    position: relative;
+  }
 
-    body {
-        margin-bottom: 160px;
-        @apply text-lg;
-    }
+  body {
+    margin-bottom: 160px;
+    @apply text-lg;
+  }
 
-    /* Clases personalizadas de colores para los textos */
-    .text1 {
-        @apply text-stone-900 dark:text-stone-100;
-    }
-    .text2 {
-        @apply text-stone-800 dark:text-stone-200;
-    }
-    .text3 {
-        @apply text-stone-700 dark:text-stone-300;
-    }
+  /* Clases personalizadas de colores para los textos */
+  .text1 {
+    @apply text-stone-900 dark:text-stone-100;
+  }
+  .text2 {
+    @apply text-stone-800 dark:text-stone-200;
+  }
+  .text3 {
+    @apply text-stone-700 dark:text-stone-300;
+  }
 
-    .link {
-        @apply dark:hover:text-blue-600 hover:text-blue-800;
-    }
+  .link {
+    @apply dark:hover:text-blue-600 hover:text-blue-800;
+  }
 
-    /* SCROLLBAR */
-    * {
-        scrollbar-width: thin;
-        scrollbar-color: #0c0a09 #f3f4f6;
-    }
+  /* SCROLLBAR */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #0c0a09 #f3f4f6;
+  }
 
-    .dark {
-        scrollbar-color: #f3f4f6 #0c0a09;
-    }
+  .dark {
+    scrollbar-color: #f3f4f6 #0c0a09;
+  }
 </style>
