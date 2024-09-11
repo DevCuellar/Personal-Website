@@ -8,7 +8,7 @@ import PostResume from "../../components/PostResume.astro";
 const posts = (await getCollection("blog")).sort((a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
-<Layout title="David Cuéllar - Blog">
+<Layout title="David Cuéllar • Blog">
   <PageTitle>Blog</PageTitle>
   <p class="mb-10 text2">Este es mi blog, aquí podrás leer artículos sobre programación, reflexiones personales o cualquier cosa que se me ocurra y me apetezca compartir.</p>
   {posts.map((post: any) => <PostResume post={post} small="true" />)}

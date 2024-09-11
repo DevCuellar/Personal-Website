@@ -24,7 +24,7 @@ const posts = (await getCollection("blog"))
   .slice(0, 3);
 ---
 
-<Layout title=`David Cuéllar - ${titleWithoutEmoji}`>
+<Layout title=`David Cuéllar • ${titleWithoutEmoji}`>
   <h1 class="text-3xl font-extrabold mb-2 mt-12 text1">{post.data.title}</h1>
   <p class="mb-10 text2 opacity-60 text-xl font-bold">
     {dateFormat(post.data.pubDate)}
